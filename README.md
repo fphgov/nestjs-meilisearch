@@ -7,16 +7,16 @@ This package is a simple wrapper around [meilisearch-js](https://github.com/meil
 This package requires `meilisearch` dependency to work properly.
 
 ```bash
-yarn add nestjs-meilisearch meilisearch
+yarn add @fphgov/nestjs-meilisearch meilisearch
 ```
 
 ## Getting Started
 
-The simplest way to use `nestjs-meilisearch` is to use `MeiliSearchModule.forRoot` or `MeiliSearchModule.forRootAsync`
+The simplest way to use `@fphgov/nestjs-meilisearch` is to use `MeiliSearchModule.forRoot` or `MeiliSearchModule.forRootAsync`
 
 ```typescript
 import { Module } from '@nestjs-common';
-import { MeiliSearchModule } from 'nestjs-meilisearch';
+import { MeiliSearchModule } from '@fphgov/nestjs-meilisearch';
 
 @Module({
   imports: [
@@ -41,7 +41,7 @@ use `@InjectMeiliSearch()` decorator in any injectables to get a `MeiliSearch` c
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { InjectMeiliSearch } from 'nestjs-meilisearch';
+import { InjectMeiliSearch } from '@fphgov/nestjs-meilisearch';
 import { MeiliSearch } from 'meilisearch';
 @Injectable()
 export class TestService {
